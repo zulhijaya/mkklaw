@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MKK Law</title>
+
+        <link href="/dist/output.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="bg-primary text-white">
+            <div class="content-container py-5">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 lg:space-x-0">
+                            <button type="button" class="lg:hidden focus:outline-none" onclick="openNav()">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor"
+                                    class="text-gray-400 hover:text-white w-6 aspect-square">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </button>
+                            <a href="/index.html" class="focus:outline-none">
+                                <div class="flex items-center space-x-2">
+                                    <img src="/asset/Logo.png" alt="Logo" class="w-6 aspect-square">
+                                    <h3 class="font-bold text-lg font-jakarta">MKK Law</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="lg:hidden relative">
+                            <button class="w-24 border border-tiber-900 rounded-lg p-3" onclick="openLangMobile()">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gb" viewBox="0 0 640 480"
+                                            class="w-5 aspect-[4/3]">
+                                            <path fill="#012169" d="M0 0h640v480H0z" />
+                                            <path fill="#FFF"
+                                                d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z" />
+                                            <path fill="#C8102E"
+                                                d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
+                                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+                                            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
+                                        </svg>
+                                        <div class="font-medium">EN</div>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="absolute">
+                                <button class="w-24 lang" id="lang-mobile">
+                                    <div class="flex items-center space-x-2 p-3 bg-white rounded-lg mt-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-id" viewBox="0 0 640 480"
+                                            class="w-5 aspect-[4/3]">
+                                            <path fill="#e70011" d="M0 0h640v240H0Z" />
+                                            <path fill="#fff" d="M0 240h640v240H0Z" />
+                                        </svg>
+                                        <div class="font-medium text-gray-800">ID</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="menu" class="menu">
+                        <ul
+                            class="flex flex-col lg:flex-row lg:space-x-10 pt-2 lg:pt-0 font-medium">
+                            <li class="text-secondary py-2">
+                                <a href="/index.html" class="hover:text-secondary">Home</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/about.html" class="hover:text-secondary">About Us</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/practice-area.html" class="hover:text-secondary">Practice Area</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/attorney.html" class="hover:text-secondary">Attorneys</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/contact.html" class="hover:text-secondary">Contact</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/career.html" class="hover:text-secondary">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden lg:block relative">
+                        <button class="w-24 border border-tiber-900 rounded-lg p-3" onclick="openLang()">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gb" viewBox="0 0 640 480"
+                                        class="w-5 aspect-[4/3]">
+                                        <path fill="#012169" d="M0 0h640v480H0z" />
+                                        <path fill="#FFF"
+                                            d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z" />
+                                        <path fill="#C8102E"
+                                            d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
+                                        <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+                                        <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
+                                    </svg>
+                                    <div class="font-medium">EN</div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="absolute">
+                            <button class="w-24 lang" id="lang">
+                                <div class="flex items-center space-x-2 p-3 bg-white rounded-lg mt-1.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-id" viewBox="0 0 640 480"
+                                        class="w-5 aspect-[4/3]">
+                                        <path fill="#e70011" d="M0 0h640v240H0Z" />
+                                        <path fill="#fff" d="M0 240h640v240H0Z" />
+                                    </svg>
+                                    <div class="font-medium text-gray-800">ID</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="relative bg-[url('/asset/corporate.png')]">
+            <div class="hero pb-48 sm:pb-36 mb-28 md:mb-24">
+                <div class="hero-title">Our People</div>
+                <p class="hero-description">
+                    We serve clients around the globe. In addition we work with many multinational law firms from the United States.
+                </p>
+            </div>
+
+            <div class="absolute -bottom-36 lg:-bottom-24 inset-x-5 md:inset-x-0 z-50">
+                <div class="bg-white max-w-xl lg:max-w-2xl mx-auto p-6 border shadow rounded-xl text-gray-800">
+                    <div class="relative w-full">
+                        <input type="text" class="w-full form-input placeholder-gray-800 mb-5" placeholder="Search our people...">
+                        <div class="absolute right-4 top-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h6 class="font-semibold text-lg mb-1">Filter</h6>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                            <select name="" id="" class="form-input">
+                                <option value="">Function</option>
+                            </select>
+                            <select name="" id="" class="form-input">
+                                <option value="">Practice</option>
+                            </select>
+                            <select name="" id="" class="form-input">
+                                <option value="">Sector</option>
+                            </select>
+                            <select name="" id="" class="form-input">
+                                <option value="">Topic</option>
+                            </select>
+                            <select name="" id="" class="form-input">
+                                <option value="">Location</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section">
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10">
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/1.jpg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/2.jpeg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/3.jpeg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/4.jpeg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/5.jpeg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/1.jpg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/2.jpeg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-[1/1.3] rounded relative">
+                    <img src="/asset/attorney/3.jpeg" alt="" class="w-full h-full object-cover object-top rounded-lg">
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="bg-black bg-opacity-50 px-4 py-3 rounded-b-lg">
+                            <div class="font-bold text-lg text-secondary">Henry Clouse</div>
+                            <div class="font-semibold text-white">Family Lawyer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between text-gray-800 mt-10">
+                <div class="font-semibold text-center mb-5 md:mb-0">Showing 1 - 16 of 354 results</div>
+                <div class="flex items-center justify-center md:justify-normal space-x-0.5 font-semibold">
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button class="bg-primary w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div class="text-white">1</div>
+                    </button>
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div>2</div>
+                    </button>
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div>3</div>
+                    </button>
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div>4</div>
+                    </button>
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div>5</div>
+                    </button>
+                    <div class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div>...</div>
+                    </div>
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <div>21</div>
+                    </button>
+                    <button class="hover:bg-tiber-100 w-9 aspect-square flex items-center justify-center rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-primary text-white">
+            <section class="section">
+                <div class="flex flex-col md:flex-row md:justify-between space-y-10 md:space-y-0">
+                    <div class="max-w-xs">
+                        <div class="flex items-center space-x-2 mb-5">
+                            <img src="/asset/Logo.png" alt="Logo" class="w-6 h-6">
+                            <h3 class="font-bold text-lg font-jakarta">Mochtar Karuwin Komar</h3>
+                        </div>
+                        <p class="text-white">From our office in Jakarta, MKK serves clients around the globe. In addition we work with many multinational law firms from the United States, Europe, Australia and Asia and with leading local law firms in the ASEAN countries.</p>
+                    </div>
+                    <div class="max-w-[15rem]">
+                        <h6 class="font-semibold text-lg mb-5">Practice Area</h6>
+                        <ul class="space-y-2.5">
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Banking & Finance</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Capital Markets</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Oil & Gas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Intellectual Property</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">General Corporate</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Tax Law</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Labor Law</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Litigation & Arbitration</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">See All</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="max-w-[15rem]">
+                        <h6 class="font-semibold text-lg mb-5">Company</h6>
+                        <ul class="space-y-2.5">
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Practice Area</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Attorney</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="max-w-[15rem]">
+                        <h6 class="font-semibold text-lg mb-5">Contact</h6>
+                        <ul class="space-y-2.5">
+                            <li>mail@mkklaw.net</li>
+                            <li>Tel. +62 21 571 1130</li>
+                            <li>Fax +62 21 571 1162, 570 1686</li>
+                            <li>14th Floor Wisma Metropolitan II Kav. 31, Jl. Jend. Sudirman Jakarta 12820 Indonesia</li>
+                            <li>P.O. Box 2844 Jakarta 10001</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="border-t border-tiber-900">
+                <div class="section text-center py-5 mt-0">Copyright &copy;2023 <span class="font-jakarta">MKK</span>. All Rights Reserved</div>
+            </div>
+        </footer>
+
+        <!-- Script -->
+        <script>
+            function openNav() {
+                const menu = document.getElementById('menu')
+                if (menu.style.maxHeight) {
+                    menu.style.maxHeight = null;
+                } else {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }
+            }
+
+            function openLang() {
+                const menu = document.getElementById('lang')
+                if (menu.style.maxHeight) {
+                    menu.style.maxHeight = null;
+                } else {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }
+            }
+
+            function openLangMobile() {
+                const menu = document.getElementById('lang-mobile')
+                if (menu.style.maxHeight) {
+                    menu.style.maxHeight = null;
+                } else {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }
+            }
+        </script>
+    </body>
+</html>

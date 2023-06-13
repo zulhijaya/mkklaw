@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>MKK Law</title>
+
+        <link href="/dist/output.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="bg-primary text-white">
+            <div class="content-container py-5">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 lg:space-x-0">
+                            <button type="button" class="lg:hidden focus:outline-none" onclick="openNav()">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor"
+                                    class="text-gray-400 hover:text-white w-6 aspect-square">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </button>
+                            <a href="/index.html" class="focus:outline-none">
+                                <div class="flex items-center space-x-2">
+                                    <img src="/asset/Logo.png" alt="Logo" class="w-6 aspect-square">
+                                    <h3 class="font-bold text-lg font-jakarta">MKK Law</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="lg:hidden relative">
+                            <button class="w-24 border border-tiber-900 rounded-lg p-3" onclick="openLangMobile()">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gb" viewBox="0 0 640 480"
+                                            class="w-5 aspect-[4/3]">
+                                            <path fill="#012169" d="M0 0h640v480H0z" />
+                                            <path fill="#FFF"
+                                                d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z" />
+                                            <path fill="#C8102E"
+                                                d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
+                                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+                                            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
+                                        </svg>
+                                        <div class="font-medium">EN</div>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="absolute">
+                                <button class="w-24 lang" id="lang-mobile">
+                                    <div class="flex items-center space-x-2 p-3 bg-white rounded-lg mt-1.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-id" viewBox="0 0 640 480"
+                                            class="w-5 aspect-[4/3]">
+                                            <path fill="#e70011" d="M0 0h640v240H0Z" />
+                                            <path fill="#fff" d="M0 240h640v240H0Z" />
+                                        </svg>
+                                        <div class="font-medium text-gray-800">ID</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="menu" class="menu">
+                        <ul
+                            class="flex flex-col lg:flex-row lg:space-x-10 pt-2 lg:pt-0 font-medium">
+                            <li class="text-secondary py-2">
+                                <a href="/index.html" class="hover:text-secondary">Home</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/about.html" class="hover:text-secondary">About Us</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/practice-area.html" class="hover:text-secondary">Practice Area</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/attorney.html" class="hover:text-secondary">Attorneys</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/contact.html" class="hover:text-secondary">Contact</a>
+                            </li>
+                            <li class="py-2">
+                                <a href="/career.html" class="hover:text-secondary">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden lg:block relative">
+                        <button class="w-24 border border-tiber-900 rounded-lg p-3" onclick="openLang()">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gb" viewBox="0 0 640 480"
+                                        class="w-5 aspect-[4/3]">
+                                        <path fill="#012169" d="M0 0h640v480H0z" />
+                                        <path fill="#FFF"
+                                            d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z" />
+                                        <path fill="#C8102E"
+                                            d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
+                                        <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+                                        <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
+                                    </svg>
+                                    <div class="font-medium">EN</div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="absolute">
+                            <button class="w-24 lang" id="lang">
+                                <div class="flex items-center space-x-2 p-3 bg-white rounded-lg mt-1.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-id" viewBox="0 0 640 480"
+                                        class="w-5 aspect-[4/3]">
+                                        <path fill="#e70011" d="M0 0h640v240H0Z" />
+                                        <path fill="#fff" d="M0 240h640v240H0Z" />
+                                    </svg>
+                                    <div class="font-medium text-gray-800">ID</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="bg-[url('/asset/corporate.png')]">
+            <div class="hero">
+                <div class="hero-title">Banking & Finance</div>
+                <div class="flex items-center space-x-3">
+                    <a href="/attorney.html" class="focus:outline-none">
+                        <button class="bg-secondary px-4 py-3 rounded-lg">
+                            <span class="font-bold text-gray-800">Meet Our Team</span>
+                        </button>
+                    </a>
+                    <a href="/practice-area.html" class="focus:outline-none">
+                        <button class="bg-secondary px-4 py-3 rounded-lg">
+                            <span class="font-bold text-gray-800">Go To Practice Area</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="section mt-0">
+            <div class="flex flex-col md:flex-row md:space-x-20">
+                <div class="mb-10 md:mb-0">
+                    <h6 class="font-bold text-2xl">Our Expertise In Banking & Finance</h6>
+                    <br>
+                    <p class="text-base md:text-lg text-gray-800 text-justify">
+                        In its finance practice MKK acts in all manner of lending and other debt financing transactions involving banks, other non–bank lenders and borrowers in all of Indonesia‘s significant economic sectors. Over the years the firm has represented most of the major international banks in this region, as well as the International Finance Corporation and Asian Development Bank, in a multitude of project finance and other lending transactions. MKK has for many years also represented international banks in their sovereign lending to the Republic.
+                        <br><br>
+                        The firm has been active in the area of structured finance since advising in the first securitization of receivables transactions brought to market in Indonesia and has acted in a number of other securitization transactions involving a variety of financial assets.
+                        <br><br>
+                        MKK also advises on the formation and licensing of new banks, financial services companies, insurance firms and other financial institutions as well as on the acquisition of established enterprises and on all legal aspects of their on–going operations and regulatory compliance.
+                    </p>
+                </div>
+                <div class="flex-none md:w-64 space-y-8">
+                    <div>
+                        <div class="aspect-square rounded-t-lg relative">
+                            <img src="/asset/attorney/1.jpg" alt="" class="w-full h-full object-cover object-top rounded-t-lg">
+                            <div class="absolute inset-x-0 bottom-0">
+                                <div class="bg-black bg-opacity-50 px-3.5 py-3">
+                                    <div class="font-semibold text- text-white">Ahmad S. Djoyosugito</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-x border-b border-gray-200 p-3.5 space-y-2 rounded-b-lg">
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                <div class="font-medium">+62812 3456 7890</div>
+                            </div>
+                            <div class="flex items-center space-x-3 mt-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
+                                <div class="font-medium">ahmad@mkklaw.net</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="aspect-square rounded-t-lg relative">
+                            <img src="/asset/attorney/2.jpeg" alt="" class="w-full h-full object-cover object-top rounded-t-lg">
+                            <div class="absolute inset-x-0 bottom-0">
+                                <div class="bg-black bg-opacity-50 px-3.5 py-3">
+                                    <div class="font-semibold text- text-white">Reza Syarief</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-x border-b border-gray-200 p-3.5 space-y-2 rounded-b-lg">
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                <div class="font-medium">+62812 3456 7890</div>
+                            </div>
+                            <div class="flex items-center space-x-3 mt-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
+                                <div class="font-medium">rezasyarief@mkklaw.net</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-primary text-white">
+            <section class="section">
+                <div class="flex flex-col md:flex-row md:justify-between space-y-10 md:space-y-0">
+                    <div class="max-w-xs">
+                        <div class="flex items-center space-x-2 mb-5">
+                            <img src="/asset/Logo.png" alt="Logo" class="w-6 h-6">
+                            <h3 class="font-bold text-lg font-jakarta">Mochtar Karuwin Komar</h3>
+                        </div>
+                        <p class="text-white">From our office in Jakarta, MKK serves clients around the globe. In addition we work with many multinational law firms from the United States, Europe, Australia and Asia and with leading local law firms in the ASEAN countries.</p>
+                    </div>
+                    <div class="max-w-[15rem]">
+                        <h6 class="font-semibold text-lg mb-5">Practice Area</h6>
+                        <ul class="space-y-2.5">
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Banking & Finance</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Capital Markets</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Oil & Gas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Intellectual Property</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">General Corporate</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Tax Law</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Labor Law</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Litigation & Arbitration</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">See All</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="max-w-[15rem]">
+                        <h6 class="font-semibold text-lg mb-5">Company</h6>
+                        <ul class="space-y-2.5">
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Practice Area</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Attorney</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline hover:underline-offset-2">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="max-w-[15rem]">
+                        <h6 class="font-semibold text-lg mb-5">Contact</h6>
+                        <ul class="space-y-2.5">
+                            <li>mail@mkklaw.net</li>
+                            <li>Tel. +62 21 571 1130</li>
+                            <li>Fax +62 21 571 1162, 570 1686</li>
+                            <li>14th Floor Wisma Metropolitan II Kav. 31, Jl. Jend. Sudirman Jakarta 12820 Indonesia</li>
+                            <li>P.O. Box 2844 Jakarta 10001</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="border-t border-tiber-900">
+                <div class="section text-center py-5 mt-0">Copyright &copy;2023 <span class="font-jakarta">MKK</span>. All Rights Reserved</div>
+            </div>
+        </footer>
+
+        <!-- Script -->
+        <script>
+            function openNav() {
+                const menu = document.getElementById('menu')
+                if (menu.style.maxHeight) {
+                    menu.style.maxHeight = null;
+                } else {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }
+            }
+
+            function openLang() {
+                const menu = document.getElementById('lang')
+                if (menu.style.maxHeight) {
+                    menu.style.maxHeight = null;
+                } else {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }
+            }
+
+            function openLangMobile() {
+                const menu = document.getElementById('lang-mobile')
+                if (menu.style.maxHeight) {
+                    menu.style.maxHeight = null;
+                } else {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }
+            }
+        </script>
+    </body>
+</html>
