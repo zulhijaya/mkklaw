@@ -26,6 +26,9 @@ module.exports = {
                     '900': '#0b493e',
                     '950': '#052a24',
                 },
+            },
+            backgroundImage: {
+                'hero': "url('/asset/corporate.png')",
             }
         },
     },
