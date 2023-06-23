@@ -40,7 +40,7 @@
     }
 
     .hero-description {
-        @apply text-gray-800 leading-relaxed max-w-md mx-auto md:mx-0 text-center md:text-left md:text-lg
+        @apply font-medium text-gray-800 leading-relaxed max-w-md mx-auto md:mx-0 text-center md:text-left md:text-lg
     }
 
     h1 {
